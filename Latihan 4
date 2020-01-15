@@ -1,0 +1,20 @@
+data=[]
+while(True):
+
+    nim=input("Masukkan NIM : ")
+    nama=input("Masukkan Nama: ")
+    nilaitugas=int(input("Masukkan Nilai Tugas: "))
+    nilaiuts=int(input("Masukkan Nilai UTS: "))
+    nilaiuas=int(input("Masukkan Nilai UAS: "))
+    nilaiakhir=int(30 * nilaitugas / 100) + (35 * nilaiuts / 100) + (35 * nilaiuas / 100)
+    data.append([nim, nama, nilaitugas, nilaiuts, nilaiuas, nilaiakhir])
+    ulangi=input("Tambah data (y/t)?")
+    if ulangi.lower() == 't':
+        break;
+
+print("\nDaftar Nama\n")
+print("===========================================================================================================================")
+print("|        NIM         |        NAMA       |    NILAI TUGAS     |      Nilai UTS    |     Nilai UAS    |   Nilai Akhir      |")
+print("===========================================================================================================================")
+for x in data:
+    print("|     {0:3}      |        {1:5}      |      {2:5}         |       {3:5}       |      {4:5}       |      {5:5}         |".format(x[0], x[1], x[2], x[3], x[4], x[5]))
